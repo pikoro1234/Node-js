@@ -1,5 +1,6 @@
-const fruteria = ["naranja","manzana","platano","fresa","uva","kiwi","fresa"];
+//debemos exporotar del modulo correspondiente
+const frutas = require("./frutas");
 
-fruteria.forEach((elementos)=>{
+frutas.forEach((elementos)=>{
     console.count(elementos);
 })
