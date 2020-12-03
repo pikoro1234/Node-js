@@ -1,11 +1,20 @@
-//debemos exporotar del modulo correspondiente
-//exportamos dos valores del arcbhivo externo
-const {frutas, precio} = require("./frutas");
+//creamos una peticion http
+const http = require('http');
 
-frutas.forEach((elementos)=>{
-    console.log(elementos);
+const puerto = 3000;
+
+//creamos un servidor
+const server = http.createServer((req, res)=>{
+    
+    res.statusCode = 200;
+
+    res.setHeader('Content-Type', 'text/html');
+    
+    res.end('<h1>hola mundo con el servidor</h1>');
+
 })
 
-precio.forEach((precio)=>{
-    console.log(precio);
-})
+//asignamos por donde escucha el servidor
+server.listen(puerto, ()=>{
+    console.log(`servidor ejecutando por el puerto ${puerto}`);
+});
