@@ -1,8 +1,9 @@
-//kmportamos en puerto y el servidor
-const {serv,port} = require('./conexion');
+const {express,app,port} = require("./conexion");
 
+app.get("/",(req, res) =>{
+    res.send("respondiendo con express");
+});
 
-//asigmanos que el servidor este a la escucha por el puerto especificado
-serv.listen(port, ()=>{
-    console.log(`servidor ejecutando por el puerto ${port}`);
+app.listen(port, () =>{
+    console.log("el servidor se ejecuta en el puerto "+port);
 });
