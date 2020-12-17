@@ -11,7 +11,7 @@ const server = http.createServer((req, res)=>{
 
     res.setHeader('Content-Type', 'text/html');
     
-    res.end('<h1>hola mundo con el servidor</h1>');
+    res.end('<h1>hola mundo con el servidor con nodemon</h1>');
 
 })
 
