@@ -1,7 +1,10 @@
 const {express,app,port} = require("./conexion");
 
-app.get("/",(req, res) =>{
-    res.send("respondiendo con express");
+app.use(express.static(__dirname + "/public"));
+
+app.use((req, res, next) =>{
+
+    res.status(404).sendFile(__dirname + "/public/404.html");
 });
 
 app.listen(port, () =>{
