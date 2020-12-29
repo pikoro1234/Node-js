@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/pikoro1234/Node-js#readme",
   "dependencies": {
+    "ejs": "^3.1.5",
     "express": "^4.17.1"
   }
 }
