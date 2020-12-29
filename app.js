@@ -8,5 +8,5 @@ app.set("views", __dirname + "/views");
 
 //rutas
 app.get("/", (req, res) =>{
-    res.render("index", {titulo: "pagina de inicio"});
+    res.render("index", {titulo: "Home"});
 })
