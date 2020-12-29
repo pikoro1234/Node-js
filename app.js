@@ -1,12 +1,12 @@
-const {express,app,port} = require("./conexion");
+const {app} = require("./conexion");
 
-app.use(express.static(__dirname + "/public"));
+//matar procesos pkill nodejs o pkill node 
 
-app.use((req, res, next) =>{
+//motor de plantillas EJS
+app.set("view engine", "ejs");
+app.set("views", __dirname + "/views");
 
-    res.status(404).sendFile(__dirname + "/public/404.html");
-});
-
-app.listen(port, () =>{
-    console.log("el servidor se ejecuta en el puerto "+port);
-});
+//rutas
+app.get("/", (req, res) =>{
+    res.render("index", {titulo: "pagina de inicio"});
+})
