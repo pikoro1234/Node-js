@@ -17,7 +17,7 @@ app.use((req, res, next) => {
 
 //motor de plantillas EJS
 app.set("view engine", "ejs");
-app.set("views", __dirname + "/views");
 
+app.set("views", __dirname + "/views");
 
 //matar procesos pkill nodejs o pkill node 
