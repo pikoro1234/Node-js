@@ -15,21 +15,21 @@
 
     <div class="container d-flex justify-content-center">
 
-        <form class="w-50 bg-white p-5 mt-3">
+        <form action="/usuarios" method="POST" class="w-50 bg-white p-5 mt-3">
 
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Nombre Completo</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <input type="text" class="form-control" name="nombre" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
 
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Correo Electronico</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input type="email" class="form-control" name="correo" id="exampleInputEmail1" aria-describedby="emailHelp">
               <div id="emailHelp" class="form-text">correo electronico valido.</div>
             </div>
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
+              <input type="password" class="form-control" name="password" id="exampleInputPassword1">
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
