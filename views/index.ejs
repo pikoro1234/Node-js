@@ -4,36 +4,37 @@
 
         <h1 class="text-center my-3">Lista Usuarios</h1>
 
-        <%= ArrayUsuarios %>
-
         <table class="table table-striped mt-5">
-            <thead>
+          <thead>
+            <tr>
+              <th scope="row" class="text-center">#</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Correo</th>
+              <th scope="col">Contraseña</th>
+              <th scope="col">Editar</th>
+              <th scope="col">Eliminar</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <% if (ArrayUsuarios.length > 0) { %>
+
+            <% ArrayUsuarios.forEach(usuario => { %>
+
               <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
+                <th scope="row" class="text-center"><%= usuario.id %> </th>
+                <td><%= usuario.nombre %> </td>
+                <td><%= usuario.correo %> </td>
+                <td><%= usuario.password %> </td>
+                <td><a href="/registrate" class="btn btn-outline-success">Editar</a></td>
+                <td><a href="/registrate" class="btn btn-outline-danger">Eliminar</a></td>
               </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-              </tr>
-            </tbody>
+              
+            <% }); %>
+            
+          <% } %> 
+                                         
+          </tbody>
         </table>
     </div>
 
