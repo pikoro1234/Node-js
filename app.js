@@ -2,8 +2,6 @@ const {app} = require("./conexion");
 
 const express = require("express");
 
-require('dotenv').config();
-
 //para archivos estaticos
 app.use(express.static(__dirname + "/public"));
 
