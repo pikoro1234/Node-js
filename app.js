@@ -2,8 +2,16 @@ const {app} = require("./conexion");
 
 const express = require("express");
 
+const bodyParser = require('body-parser');
+
 //para archivos estaticos
 app.use(express.static(__dirname + "/public"));
+
+// parse parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
+
+//parse aplication/json
+app.use(bodyParser.json())
 
 //rutas de redireccionamiento
 app.use('/', require('./routers/rutas'));
