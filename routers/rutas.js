@@ -28,6 +28,24 @@ router.get("/registrate", (req, res) =>{
     res.render("registrate", {titulo: "Registrate"})
 })
 
+router.get("/usuarios/:id", async (req, res) =>{
+
+    const id = req.params.id;
+
+    try {
+
+        const usuarioDB = await Usuario.findOne({ _id: id })
+
+        res.render("editar", {titulo: "Editar", usuario: usuarioDB})
+        
+    } catch (error) {
+        
+        console.log(error);
+    }
+
+   
+})
+
 //ruta para el envio del  formulario
 router.post('/usuarios', async (req, res) =>{
 
@@ -48,14 +66,5 @@ router.post('/usuarios', async (req, res) =>{
         console.log(error);
     }
 })
-
-
-/* try {
-        const mascotaDB = new Mascota(body)
-        await mascotaDB.save()
-        res.redirect('/mascotas')
-    } catch (error) {
-        console.log('error', error)
-    } */
 
 module.exports = router;

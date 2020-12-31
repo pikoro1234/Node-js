@@ -11,8 +11,7 @@
               <th scope="col">Nombre</th>
               <th scope="col">Correo</th>
               <th scope="col">Contraseña</th>
-              <th scope="col">Editar</th>
-              <th scope="col">Eliminar</th>
+              <th scope="col">Detalles</th>
             </tr>
           </thead>
           <tbody>
@@ -26,8 +25,7 @@
                 <td><%= usuario.nombre %> </td>
                 <td><%= usuario.correo %> </td>
                 <td><%= usuario.password %> </td>
-                <td><a href="/registrate" class="btn btn-outline-success">Editar</a></td>
-                <td><a href="/registrate" class="btn btn-outline-danger">Eliminar</a></td>
+                <td><a href="usuarios/<%= usuario.id %>" class="btn btn-outline-success">Detalles</a></td>                
               </tr>
               
             <% }) %>
