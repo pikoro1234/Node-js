@@ -2,13 +2,13 @@ const express = require('express');
 
 const router = express.Router();
 
-const conexionDB = require('../rmodels/conexionMongoose');
-
 const Usuario = require('../rmodels/usuario');
 
 router.get("/", (req, res) =>{
 
     try {
+
+        require('../rmodels/conexionMongoose');
 
         Usuario.find({}, function (err, docs) {
 
