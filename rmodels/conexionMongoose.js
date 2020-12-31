@@ -1,14 +1,8 @@
 const mongoose = require('mongoose');
 
-const usuario = "jorge123";
-
-const password = "Fmd1uzBgFSLsQ6N0";
-
-const dbName = "Registro";
-
 require('dotenv').config();
 
-const uri = `mongodb+srv://${usuario}:${password}@cluster0.3wyvv.mongodb.net/${dbName}?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://${process.env.USUARIO}:${process.env.PASSWORD}@cluster0.3wyvv.mongodb.net/${process.env.DBNAME}?retryWrites=true&w=majority`;
 
 mongoose.connect(uri, { 
     useNewUrlParser: true, 
